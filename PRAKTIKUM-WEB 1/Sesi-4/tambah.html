@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tambah Karyawan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar bg-primary navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Penggajian</a>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h5>Tambah / Edit Karyawan</h5>
+        <form id="addEmployeeForm">
+            <div class="mb-3">
+                <label for="NIK" class="form-label">NIK</label>
+                <input type="text" class="form-control" size="10" maxlength="10" required placeholder="Misal 123466788" name="NIK" id="NIK">
+            </div>
+            <div class="mb-3">
+                <label for="Nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" name="Nama" id="Nama">
+            </div>
+            <div class="mb-3">
+                <label for="Tanggal_Mulai" class="form-label">Tanggal Mulai:</label>
+                <input type="date" class="form-control" name="Tanggal_Mulai" id="Tanggal_Mulai" min="2022-01-01" required>
+            </div>
+            <div class="mb-3">
+                <label for="Gaji_Pokok" class="form-label">Gaji Pokok:</label>
+                <input type="number" class="form-control" name="Gaji_Pokok" id="Gaji_Pokok" min="1000000" step="1000" required>
+            </div>
+            <label>Status Karyawan:</label><br>
+            <input type="radio" name="status_karyawan" id="tetap" value="tetap" required>
+            <label for="tetap">Tetap</label>
+            <input type="radio" name="status_karyawan" id="kontrak" value="kontrak" required>
+            <label for="kontrak">Kontrak</label>
+            <input type="radio" name="status_karyawan" id="magang" value="magang" required>
+            <label for="magang">Magang</label><br>
+            <button type="submit" class="btn btn-success mt-3">Simpan</button>
+            <a href="index.html" class="btn btn-secondary mt-3">Batal</a>
+        </form>
+    </div>
+</body>
+</html>
